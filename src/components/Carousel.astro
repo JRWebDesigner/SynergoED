@@ -1,0 +1,21 @@
+<div id="carousel-image" class="flex flex-nowrap gap-5 my-14">
+    <img class="w-40 z-10" src="/armad-tabl/armad-tabl.png" alt="a" />
+    <img class="w-40 z-10" src="/aut-sise/aut-sise.jpeg" alt="b" />
+    <img class="w-40 z-10" src="/ban-port/ban-port.jpeg" alt="v" />
+    <img class="w-40 z-10" src="/cab-estr/cab-estr.png" alt="d" />
+    <img class="w-40 z-10" src="/dis-elec/dis-elec.jpeg" alt="w" />
+    <img class="w-40 z-10" src="/est-lumin/est-lumin.jpeg" alt="c" />
+</div>
+<style>
+    #carousel-image {
+		animation: infinite linear 25s carousel;
+	}
+	@keyframes carousel {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-130vw);
+		}
+	}
+</style>

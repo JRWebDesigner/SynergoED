@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Home from "../components/Home.astro";
+import Carousel from "../components/Carousel.astro";
+import Catalogue from "../components/Catalogue.astro";
+---
+<Layout title="Bienvenido a SynergoED">
+	<Home />
+	<section class="my-10 relative">
+		<img
+			class="absolute top-[50%] w-[400px] right-1 z-0 opacity-25"
+			src="/Logos/foquito.svg"
+			alt=""
+		/>
+		<div class="z-10 px-8 md:px-14">
+			<h2 class="flex gap-2">
+				<img class="w-4 mt-2" src="/Logos/rayo.svg" alt="" />¿Quienes
+				somos?
+			</h2>
+			<p class="">
+				SynergoED es una empresa dedicada al servicio de la industria
+				eléctrica; realizamos <em>diseños eléctricos</em>, <em
+					>instalaciones eléctricas en general</em
+				>, <em>cableado estructurado</em>, <em
+					>mantenimiento y reestructuración del sistema eléctrico en
+					todo tipo de infraestructuras</em
+				>.
+			</p>
+		</div>
+		<Carousel />
+		<div
+					class="relative my-14 bg-black flex flex-wrap gap-6 z-10 justify-center items-center h-[45vh] w-[100%] p-2"
+				>
+					<img
+						class="w-full h-full object-cover -z-10 opacity-15 absolute"
+						src="/dis-elec/dis-elec4.jpg"
+						alt=""
+					/>
+					<span
+						class="font-bold text-[#00ac00] text-7xl font-serif"
+						>DISEÑO</span
+					>
+					<span class="text-blue-600 font-semibold text-2xl"
+						>Cableado estructurado
+						<br />
+						<br />
+						Instalacion eléctrica
+					</span>
+		</div>
+		<div class="my-14">
+			<div class="z-10 px-8 md:px-14">
+				<p>
+					Elaboración del diseño y dimensionamiento de las redes
+					eléctricas en interiores y exteriores en base a las necesidades
+					
+					propias del tipo de construcción, en cumplimiento a las norma
+					vigente en nuestro territorio, para tal caso es la <em
+						>normativa NB-777</em
+					>.
+				</p>
+			</div>
+		</div>
+	</section>
+	<Catalogue />
+	<div class="z-10 mt-10 px-8 md:px-14">
+		<p class="">
+			En SynergoED contamos con profesionales <em
+				>Ingenieros avalados por la Sociedad de Ingenieros de
+				Bolivia (SIB)</em
+			>, capacitados y con una amplia experiencia en la elaboración de
+			Proyectos Eléctricos.
+		</p>
+	</div>
+</Layout>
+<style>
+	span{
+		text-shadow: #008d0c 1px 0 10px;
+		font-family: 'josuem318',sans-serif
+	}
+</style>

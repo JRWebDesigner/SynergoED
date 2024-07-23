@@ -1,0 +1,71 @@
+---
+import Tarjeta from "./Tarjeta.astro";
+---
+
+<section
+	class="grid place-content-center place-items-center gap-7 bg-[url('/Logos/fondoElectrico2.jpg')] bg-opacity-55 text-center pb-20"
+>
+	<h2 class="text-white font-bold bg-transparent mt-10 text-center w-[100%]">
+		SynergoED te ofrece
+	</h2>
+	<Tarjeta
+		imagen="/dis-elec/dis-elec.jpeg"
+		titulo="Diseño y Elaboración de Proyectos de Instalación Eléctrica"
+	/>
+	<Tarjeta
+		imagen="/ins-cod/ins-cod2.jpg"
+		titulo="Instalación de Sistemas de Canalización Conduit"
+	/>
+	<Tarjeta
+		imagen="/ban-port/ban-port2.jpg"
+		titulo="Instalación y Montaje de Bandejas Portacables"
+	/>
+	<Tarjeta
+		imagen="/man-sise/man-sise.jpeg"
+		titulo="Mantenimiento de Sistemas Eléctricos"
+	/>
+	<Tarjeta imagen="/est-lumin/est-lumin3.jpg" titulo="Estudio Luminotécnico" />
+	<Tarjeta
+		imagen="/inst-sisi/inst-sisi.jpeg"
+		titulo="Instalación de sistemas de Iluminación Interior y Exterior"
+	/>
+	<Tarjeta
+		imagen="/aut-sise/aut-sise.jpeg"
+		titulo="Automatización de Sistemas Eléctricos de Iluminación"
+	/>
+	<Tarjeta
+		imagen="/dis-tabl/dis-tabl.png"
+		titulo="Diseño y Dotación de Tableros Eléctricos"
+	/>
+	<Tarjeta
+		imagen="/armad-tabl/armad-tabl.png"
+		titulo="Armado, Montaje e Instalación de Tableros Eléctricos"
+	/>
+	<Tarjeta imagen="/puest-t/puest-t.png" titulo="Sistemas de Puesta a Tierra" />
+	<Tarjeta imagen="/cab-estr/cab-estr.png" titulo="Cableado Estructurado" />
+</section>
+<style>
+	
+</style>
+<script>
+	const cards = document.querySelectorAll(".Cards");
+	let options = {
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.5,
+	};
+	function loadCard(entry, observer) {
+		entry.forEach((entrada) => {
+			if (entrada.isIntersecting) {
+				if (entrada.target.classList.contains("opacity-15")) {
+					entrada.target.classList.replace("opacity-15", "transition-card");
+					entrada.target.classList.add('transition-card')
+				}
+			} 
+		});
+	}
+	let observer = new IntersectionObserver(loadCard, options);
+	cards.forEach((card) => {
+		observer.observe(card);
+	});
+</script>
