@@ -2,19 +2,22 @@
 interface Props {
   titulo: string;
   imagen: string;
+  id:string;
 }
-const {titulo, imagen} = Astro.props;
+const {titulo, imagen, id} = Astro.props;
 ---
 
-<div class="Cards before-entry relative opacity-15 flex flex-wrap lg:flex-nowrap w-[70%] max-w-[1000px] p-1 bg-[rgb(107,142,35)] rounded-xl justify-center items-center gap-4 hover:bg-[rgb(1,71,1)] hover:w-[calc(70%+10px)] shadow-lg shadow-violet-950">
-
+<div class="Cards before-entry relative opacity-15  w-[70%] max-w-[1000px] p-1 bg-[rgb(107,142,35)] rounded-xl  hover:bg-[rgb(1,71,1)] hover:w-[calc(70%+10px)] shadow-lg shadow-violet-950">
+  <a href=`/Especialidades/#${id}` class="flex flex-wrap lg:flex-nowrap justify-center items-center gap-4">
     <img class="image-ofrece" src=`${imagen}` alt=`${titulo}` />
 
     <img class="absolute rounded-xl w-full h-full opacity-10 z-0 object-cover" src=`${imagen}` alt=`${titulo}` />
     <div>
         <h3 class="relative z-10 text-[rgb(245,245,220)]" > {titulo} </h3>
     </div>
+  </a>
 </div>
+
 
 <style>
     .image-ofrece{
