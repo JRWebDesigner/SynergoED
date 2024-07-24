@@ -1,0 +1,13 @@
+---
+const {id, image, title }=Astro.props
+---
+<div id=`${id}` class="bg-white my-3 mx-5 p-4 shadow-lg grid place-items-center gap-6 rounded-xl
+">
+    <h2 class="text-black text-3xl text-center">{title}</h2>
+    <div class="flex justify-center">
+        <img class="w-[50%]" src=`${image}` alt=`${title}`/>
+    </div>
+    <p>
+        <slot />
+    </p>
+</div>
