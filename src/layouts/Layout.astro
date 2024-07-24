@@ -20,7 +20,7 @@ import  SpeedInsights  from "@vercel/speed-insights/astro";
 		<main>
 			<slot />
 			<Whatsapp />
-		</main> 
+		</main>
 		<SpeedInsights />
 		<Footer />
 	</body>
@@ -28,6 +28,7 @@ import  SpeedInsights  from "@vercel/speed-insights/astro";
 
 <style is:global>
 html,body{
+	scroll-behavior: smooth;
 	background-color: rgb(211,211,211);
 	overflow-x: hidden;
 	min-height: 100vh;
